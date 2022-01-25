@@ -81,9 +81,15 @@ class ClientController extends Controller
     public function update(Request $request, Client $client)
     {
         $request->validate([
+            'cedula' => 'required',
             'name' => 'required',
             'lastname1' => 'required',
             'lastname2' => 'required',
+            'phone_number' => 'required',
+            'email' => 'required|email',
+            'address' => 'required',
+            'position' => '',
+            'description_position' => '',
         ]);
 
         $client->update($request->all());

@@ -16,12 +16,12 @@ class CreateClientsTable extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('cedula')->nullable();
+            $table->string('cedula');
             $table->string('lastname1');
             $table->string('lastname2');
-            $table->string('phone_number')->nullable();
-            $table->string('email')->unique()->nullable();
-            $table->string('address')->nullable();
+            $table->string('phone_number');
+            $table->string('email')->unique();
+            $table->string('address');
             $table->string('position')->nullable();
             $table->text('description_position')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
