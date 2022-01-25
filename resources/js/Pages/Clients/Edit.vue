@@ -20,7 +20,7 @@
                         <div class="shadow bgwhite md:rounded-md p-4">
                            <form @submit.prevent="submit">
                                <label class="block font-medium text-sm text-gray-700">Nombre</label>
-                               <textarea class="form-input w-full rounded-md shadow-sm" v-model="form.name"></textarea>
+                               <input class="form-input w-full rounded-md shadow-sm" v-model="form.name">
 
                                <label class="block font-medium text-sm text-gray-700">Primer apellido</label>
                                <textarea class="form-input w-full rounded-md shadow-sm" v-model="form.lastname1"></textarea>
