@@ -45,7 +45,7 @@
                                <input class="form-input w-full rounded-md shadow-sm" v-model="form.position">
 
                                <label class="block font-medium text-sm text-gray-700">Descripción del cargo</label>
-                               <input class="form-input w-full rounded-md shadow-sm" v-model="form.description_position">
+                               <textarea class="form-input w-full rounded-md shadow-sm" v-model="form.description_position">
 
                                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
                                     Editar
@@ -72,7 +72,7 @@ import Input from '../../Jetstream/Input.vue'
         components: {
             AppLayout,
             Head,
-            Link
+            Link,
                 Input,
         },
         props: {
