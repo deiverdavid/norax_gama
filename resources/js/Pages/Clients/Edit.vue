@@ -73,7 +73,7 @@ import Input from '../../Jetstream/Input.vue'
             AppLayout,
             Head,
             Link,
-                Input,
+            Input,
         },
         props: {
             client: Object,
@@ -81,9 +81,16 @@ import Input from '../../Jetstream/Input.vue'
         data (){
             return {
                 form:{
+                    cedula: this.client.cedula,
                     name: this.client.name,
                     lastname1: this.client.lastname1,
                     lastname2: this.client.lastname2,
+                    phone_number: this.client.phone_number,
+                    email: this.client.email,
+                    address: this.client.address,
+                    position: this.client.position,
+                    description_position: this.client.description_position,
+
 
                 }
             }
