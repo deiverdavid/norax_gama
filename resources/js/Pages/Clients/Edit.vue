@@ -19,14 +19,33 @@
                     <div class="md:col-span-2 mt-5 md:mt-0">
                         <div class="shadow bgwhite md:rounded-md p-4">
                            <form @submit.prevent="submit">
+                               
+                               <label class="block font-medium text-sm text-gray-700">Cédula</label>
+                               <input class="form-input w-full rounded-md shadow-sm border-b-2" v-model="form.cedula">
+
                                <label class="block font-medium text-sm text-gray-700">Nombre</label>
-                               <input class="form-input w-full rounded-md shadow-sm" v-model="form.name">
+                               <input class="form-input w-full rounded-md shadow-sm border-b-2" v-model="form.name">
 
                                <label class="block font-medium text-sm text-gray-700">Primer apellido</label>
-                               <textarea class="form-input w-full rounded-md shadow-sm" v-model="form.lastname1"></textarea>
+                               <input class="form-input w-full rounded-md shadow-sm" v-model="form.lastname1">
 
                                <label class="block font-medium text-sm text-gray-700">Segundo apellido</label>
-                               <textarea class="form-input w-full rounded-md shadow-sm" v-model="form.lastname2"></textarea>
+                               <input class="form-input w-full rounded-md shadow-sm" v-model="form.lastname2">
+
+                               <label class="block font-medium text-sm text-gray-700">Número de celular</label>
+                               <input class="form-input w-full rounded-md shadow-sm" v-model="form.phone_number">
+
+                               <label class="block font-medium text-sm text-gray-700">Correo electronico</label>
+                               <input class="form-input w-full rounded-md shadow-sm" v-model="form.email">
+
+                               <label class="block font-medium text-sm text-gray-700">Dirección</label>
+                               <input class="form-input w-full rounded-md shadow-sm" v-model="form.address">
+
+                               <label class="block font-medium text-sm text-gray-700">Cargo</label>
+                               <input class="form-input w-full rounded-md shadow-sm" v-model="form.position">
+
+                               <label class="block font-medium text-sm text-gray-700">Descripción del cargo</label>
+                               <input class="form-input w-full rounded-md shadow-sm" v-model="form.description_position">
 
                                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
                                     Editar
@@ -46,13 +65,15 @@
     import { defineComponent } from 'vue'
     import AppLayout from '@/Layouts/AppLayout.vue'
     import { Head, Link } from '@inertiajs/inertia-vue3'
+import Input from '../../Jetstream/Input.vue'
     
 
     export default defineComponent({
         components: {
             AppLayout,
             Head,
-            Link,
+            Link
+                Input,
         },
         props: {
             client: Object,
