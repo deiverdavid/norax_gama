@@ -59,6 +59,7 @@
             return {
                 form:{
                     name: '',
+                    name: '',
                     lastname1: '',
                     lastname2: '',
                 }
