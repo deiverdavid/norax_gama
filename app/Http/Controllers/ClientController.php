@@ -39,9 +39,15 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'cedula' => 'required',
             'name' => 'required',
             'lastname1' => 'required',
             'lastname2' => 'required',
+            'phone_number' => 'required',
+            'email' => 'required|email',
+            'address' => 'required',
+            'position' => '',
+            'description_position' => '',
         ]);
 
         $client = Client::create($request->all());
