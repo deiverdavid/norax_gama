@@ -52,7 +52,7 @@ class ClientController extends Controller
 
         $client = Client::create($request->all());
 
-        return redirect()->route('clients.index');
+        return redirect()->route('clients.index')->with('status', 'Usuario Creado');
     }
 
     /**
@@ -100,7 +100,7 @@ class ClientController extends Controller
 
         $client->update($request->all());
 
-        return redirect()->route('clients.index');
+        return redirect()->route('clients.index')->with('status', 'Usuario Actualizado');
     }
 
     /**
@@ -113,6 +113,6 @@ class ClientController extends Controller
     {
         $client->delete();
 
-        return redirect()->route('clients.index');
+        return redirect()->route('clients.index')->with('status', 'Usuario Eliminado');
     }
 }
