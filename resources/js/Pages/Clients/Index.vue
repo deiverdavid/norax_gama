@@ -15,13 +15,8 @@
                             <p class="text-sm text-gray-600 text-white">Toma el registro correcto y ejecuta cualquier función (ver, editar o eliminar)</p>
                     </div>
    
-
                     <div class="container ml-2 mt-4">
                             <input type="text" class="form-input rounded-md shadow-sm" placeholder="Buscar..." v-model="q">
-
-
-                    <div class="container ml-2 mt-4">
-                            
 
                             <Link :href="route('clients.create')" class="m-2 p-2 bg-blue-500 my-1 mt-1 rounded-md text-white">
                                Nuevo +
