@@ -1,6 +1,30 @@
 <template>
     <Head title="Log in" />
 
+     <div class="container bg-white w-full grid grid-cols-3 ">
+
+                <div class="flex items-stretch my-3 justify-end mr-2">
+                <!--Necesito poner una imagen acá-->
+                <img src="public/storage/img/Norax.jpg" alt="IMAGEN" class="flex ">
+                </div>
+
+                <div class="flex mt-4 ">
+                    <a href="" class="mx-2 hover:text-gray-500">About</a>
+                    <a href="" class="mx-2 hover:text-gray-500">Products</a>
+                    <a href="" class="mx-2 hover:text-gray-500">Pricing</a>
+                    <a href="" class="mx-2 hover:text-gray-500">Blog</a>
+                    <a href="" class="mx-2 hover:text-gray-500">Jobs</a>
+                    <a href="" class="mx-2 hover:text-gray-500">Mores</a>
+                </div>
+
+                <div class="flex justify-end">
+                    <jet-button class="p-2 bg-norax my-1 mt-1" :disabled="form.processing">
+                        Registrarse
+                    </jet-button>
+                </div>
+            </div>
+
+
     <jet-authentication-card>
         <template #logo>
             <jet-authentication-card-logo />
@@ -26,19 +50,22 @@
             <div class="block mt-4">
                 <label class="flex items-center">
                     <jet-checkbox name="remember" v-model:checked="form.remember" />
-                    <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                    <span class="ml-2 text-sm text-gray-600">Recordarme</span>
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-center mt-4">
                 <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
                     Forgot your password?
                 </Link>
-
-                <jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Log in
-                </jet-button>
             </div>
+
+            <div class="flex justify-center w-full mt-4">
+                    <jet-button class="mx-auto bg-norax" :disabled="form.processing">
+                        Ingresar
+                    </jet-button>
+            </div>
+
         </form>
     </jet-authentication-card>
 </template>
