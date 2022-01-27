@@ -13,10 +13,12 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         return Inertia::render('Clients/Index', [
-            'clients' => Client::latest()->get()
+            'clients' => Client::latest()
+            ->where('name', 'LIKE', "%$request->q%")
+            ->get()
         ]);
     }
 
