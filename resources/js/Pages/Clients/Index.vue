@@ -14,12 +14,14 @@
                             <h2 class="text-lg text-white">Listado de usuarios</h2>
                             <p class="text-sm text-gray-600 text-white">Toma el registro correcto y ejecuta cualquier función (ver, editar o eliminar)</p>
                     </div>
+   
 
-<<<<<<< HEAD
-                    
-=======
                     <div class="container ml-2 mt-4">
                             <input type="text" class="form-input rounded-md shadow-sm" placeholder="Buscar..." v-model="q">
+
+
+                    <div class="container ml-2 mt-4">
+                            
 
                             <Link :href="route('clients.create')" class="m-2 p-2 bg-blue-500 my-1 mt-1 rounded-md text-white">
                                Nuevo +
@@ -42,11 +44,17 @@
                                 <tbody >
 
                                     <tr v-for="client in clients" :key="client.id" >
->>>>>>> fe3aef93916506ee1c4cb324d7c1b7fd84ee1b01
+
                                     <td class="border px-4 py-2">
                                         {{ client.name }}
                                     </td>
                                     <td class="border px-4 py-2">
+
+                                    <td class="border px-4 py-2">
+                                        {{ client.name }}
+                                    </td>
+                                    <td class="border px-4 py-2">
+
                                        {{ client.name }}
                                     </td>
                                     <td class="border px-4 py-2">
