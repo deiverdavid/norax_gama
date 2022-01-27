@@ -20,14 +20,34 @@
                         <div class="shadow bgwhite md:rounded-md p-4">
                            <form @submit.prevent="submit">
                               
-                               <label class="block font-medium text-sm text-gray-700">Nombre</label>
-                               <textarea class="form-input w-full rounded-md shadow-sm" v-model="form.name"></textarea>
+                             <label class="block font-medium text-sm text-gray-700">Cédula</label>
+                               <input class="form-input w-full rounded-md shadow-sm border-b-2 mb-3" v-model="form.cedula">
+
+                               <label class="block font-medium text-sm text-gray-700 m">Nombre</label>
+                               <input class="form-input w-full rounded-md shadow-sm border-b-2 mb-3" v-model="form.name">
 
                                <label class="block font-medium text-sm text-gray-700">Primer apellido</label>
-                               <textarea class="form-input w-full rounded-md shadow-sm" v-model="form.lastname1"></textarea>
+                               <input class="form-input w-full rounded-md shadow-sm mb-3" v-model="form.lastname1">
 
                                <label class="block font-medium text-sm text-gray-700">Segundo apellido</label>
-                               <textarea class="form-input w-full rounded-md shadow-sm" v-model="form.lastname2"></textarea>
+                               <input class="form-input w-full rounded-md shadow-sm mb-3" v-model="form.lastname2">
+
+                               <label class="block font-medium text-sm text-gray-700">Número de celular</label>
+                               <input class="form-input w-full rounded-md shadow-sm mb-3" v-model="form.phone_number">
+
+                               <label class="block font-medium text-sm text-gray-700">Correo electronico</label>
+                               <input class="form-input w-full rounded-md shadow-sm mb-3" v-model="form.email">
+
+                               <label class="block font-medium text-sm text-gray-700">Dirección</label>
+                               <input class="form-input w-full rounded-md shadow-sm mb-3" v-model="form.address">
+
+                               <label class="block font-medium text-sm text-gray-700">Cargo</label>
+                               <input class="form-input w-full rounded-md shadow-sm mb-3" v-model="form.position">
+
+                               <label class="block font-medium text-sm text-gray-700">Descripción del cargo</label>
+                               <textarea class="form-input w-full rounded-md shadow-sm mb-5" v-model="form.description_position"></textarea>
+
+                
 
                                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
                                     Crear
@@ -58,9 +78,15 @@
         data (){
             return {
                 form:{
+                     cedula: '',
                     name: '',
                     lastname1: '',
                     lastname2: '',
+                    phone_number: '',
+                    email: '',
+                    address: '',
+                    position: '',
+                    description_position: '',
                 }
             }
         },

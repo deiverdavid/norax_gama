@@ -1,6 +1,28 @@
 <template>
     <Head title="Register" />
 
+    <div class="container bg-white w-full grid grid-cols-3 ">
+
+         <div class="flex items-stretch my-3 justify-end mr-2">
+         <!--Necesito poner una imagen acá-->
+         <img src="public/storage/img/Norax.jpg" alt="IMAGEN" class="flex ">
+         </div>
+         <div class="flex mt-4 ">
+             <a href="" class="mx-2 hover:text-green-500">About</a>
+             <a href="" class="mx-2 hover:text-gray-500">Products</a>
+             <a href="" class="mx-2 hover:text-gray-500">Pricing</a>
+             <a href="" class="mx-2 hover:text-gray-500">Blog</a>
+             <a href="" class="mx-2 hover:text-gray-500">Jobs</a>
+             <a href="" class="mx-2 hover:text-gray-500">Mores</a>
+         </div>
+         <div class="flex justify-end">
+             <jet-button class="p-2 bg-norax my-1 mt-1" :disabled="form.processing">
+                 Iniciar
+             </jet-button>
+         </div>
+
+    </div>
+
     <jet-authentication-card>
         <template #logo>
             <jet-authentication-card-logo />
@@ -41,14 +63,16 @@
                 </jet-label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <Link :href="route('login')" class="underline text-sm text-gray-600 hover:text-gray-900">
-                    Already registered?
-                </Link>
+            <div class="flex items-center justify-center mt-4">
+                    <Link :href="route('login')" class="underline text-sm text-gray-600 hover:text-gray-900">
+                        ¿Ya estás registrar?
+                    </Link>                   
+            </div>
 
-                <jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Register
-                </jet-button>
+            <div class="flex justify-center w-full mt-4">
+                    <jet-button class="mx-auto bg-norax" :disabled="form.processing">
+                        Registrarse
+                    </jet-button>
             </div>
         </form>
     </jet-authentication-card>
